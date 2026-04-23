@@ -198,32 +198,21 @@ body:not(.dark-theme) .news-ticker p {
 }
 /* --- MOBILE RESPONSIVENESS --- */
 @media screen and (max-width: 768px) {
-    /* Force the container to not overflow */
-    .container {
-        width: 95% !important;
-        padding: 10px;
-    }
 
-    /* Stack Header */
-    .site-header {
+    .news-grid {
+        display: flex !important;
         flex-direction: column !important;
+        gap: 20px;
     }
-    
+    .main-news, 
+    .side-news, 
+    .card,
     .Ad-container img {
         width: 100% !important;
         height: auto !important;
     }
-
-    /* Force the grid to stack vertically */
-    .news-grid {
-        display: block !important; 
+    .site-header {
+        flex-direction: column !important;
+        text-align: center;
     }
-
-    .main-news, .side-news, .card {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* Hide the Ad on very small screens if it's too messy */
-    /* .Ad-container { display: none; } */
 }
