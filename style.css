@@ -196,3 +196,35 @@ body:not(.dark-theme) .news-ticker {
 body:not(.dark-theme) .news-ticker p {
     color: #333;
 }
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    /* 1. Stack the Logo and Ad vertically */
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* 2. Make the News Grid a single column */
+    .news-grid {
+        grid-template-columns: 1-fr !important; /* Forces cards to stack */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 3. Ensure the main image and cards take full width */
+    .main-news, .side-news, .card {
+        width: 100%;
+    }
+
+    /* 4. Fix the Ticker for small screens */
+    .news-ticker {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .ticker-lable {
+        width: 100%;
+        text-align: center;
+    }
+}
