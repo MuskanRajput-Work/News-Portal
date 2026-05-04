@@ -188,8 +188,16 @@ body.dark-theme .mini-card { border-top: 1px solid #333; }
 /* --- 8. MOBILE RESPONSIVENESS (Refined) --- */
 @media (max-width: 768px) {
     .site-header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 15px;
+    }
+    .logo img{
+        height: 50px;
+    }
+    .Ad-container img{
+        width: 180px;
+        height: 50px;
     }
     .nav-bar {
         flex-direction: column;
@@ -203,11 +211,15 @@ body.dark-theme .mini-card { border-top: 1px solid #333; }
     }
     .search-container {
         width: 100%;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between; 
+        align-items: center;
         margin-left: 0; 
     }
     .search-container input {
         width: 75%; 
+        padding: 4px 10px;
     }
     .top-stories, .small-post-group, .mini-card {
         display: flex !important;
@@ -216,6 +228,6 @@ body.dark-theme .mini-card { border-top: 1px solid #333; }
     .Ad-container img, .primary-post, .side-card { 
         width: 100% !important; 
     }
-    .primary-post { height: 300px; }
-    .side-card { height: 180px; }
+    .primary-post { height: 250px; }
+    .side-card { height: 160px; }
 }
