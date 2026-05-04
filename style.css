@@ -185,14 +185,37 @@ body.dark-theme .news-ticker { background-color: #1a1a1a; }
 body.dark-theme .section-title { color: #00b3b3; }
 body.dark-theme .mini-card { border-top: 1px solid #333; }
 
-/* --- 8. MOBILE RESPONSIVENESS --- */
+/* --- 8. MOBILE RESPONSIVENESS (Refined) --- */
 @media (max-width: 768px) {
-    .site-header, .nav-bar, .top-stories, .small-post-group, .mini-card {
-        flex-direction: column; 
-        display: flex !important;
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
     }
-    .Ad-container img { width: 100%; height: auto; }
+    .nav-bar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+    .category {
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+    .search-container {
+        width: 100%;
+        justify-content: space-between; 
+        margin-left: 0; 
+    }
+    .search-container input {
+        width: 75%; 
+    }
+    .top-stories, .small-post-group, .mini-card {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .Ad-container img, .primary-post, .side-card { 
+        width: 100% !important; 
+    }
     .primary-post { height: 300px; }
-    .side-card { height: 180px; margin-bottom: 10px; }
-    .category { margin-bottom: 15px; gap: 15px; }
+    .side-card { height: 180px; }
 }
