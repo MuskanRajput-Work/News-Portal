@@ -17,33 +17,41 @@
             <img src="Arirang.jpg" alt="BTS Arirang Ad">
         </div>
     </header>
+
     <nav class="nav-bar">
         <ul class="category">
-            <li><a href="#">Fashion</a></li>
-            <li><a href="#">Tech</a></li>
-            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#fashion">Fashion</a></li>
+            <li><a href="#tech">Tech</a></li>
+            <li><a href="#lifestyle">Lifestyle</a></li>
         </ul>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search news..." onkeyup="searchNews()">
+        </div>
         <div class="theme">
             <input type="checkbox" id="theme-toggle">
         </div>
     </nav>
+
     <div class="news-ticker">
         <span class="ticker-lable">Breaking News</span>
-        <p>Grand Live Concert in Germany - July 24, 2026</p>
+        <p><span id="current-date"></span> | Grand Live Concert in Germany</p>
     </div>
+
+    <!-- FASHION SECTION (The Main Stories) -->
+    <h2 id="fashion" class="section-title">Latest in Fashion & Trends</h2>
     <section class="top-stories">
-        <article class="primary-post" style="background-image: url('https://picsum.photos/800/500?sig=1'); background-size: cover;">
+        <article class="primary-post">
             <div class="caption-box">
-                <h3>Breaking: New Tech Revolutionizes Web Dev</h3>
+                <h3>Loading Breaking News...</h3>
             </div>
         </article>
         <div class="small-post-group">
-            <article class="side-card" style="background-image: url('https://picsum.photos/400/400?sig=2'); background-size: cover;">Fashion Trends</article>
-            <article class="side-card" style="background-image: url('https://picsum.photos/400/400?sig=3'); background-size: cover;">New Gadgets</article>
-            <article class="side-card" style="background-image: url('https://picsum.photos/400/400?sig=4'); background-size: cover;">Sports</article>
-            <article class="side-card" style="background-image: url('https://picsum.photos/400/400?sig=5'); background-size: cover;">Health</article>
+            <!-- News API will fill these -->
         </div>
     </section>
+
+    <!-- TECH SECTION -->
+    <h2 id="tech" class="section-title">Technology & Gadgets</h2>
     <section class="bottom-feed">
         <article class="mini-card">
             <div class="thumb-box"></div>
@@ -53,7 +61,20 @@
             </div>
         </article>
     </section>
+
+    <!-- LIFESTYLE SECTION -->
+    <h2 id="lifestyle" class="section-title">Lifestyle</h2>
+    <section class="bottom-feed">
+        <article class="mini-card">
+            <div class="thumb-box"></div>
+            <div class="news-info">
+                <h4>Upcoming Wellness Retreat</h4>
+                <p>August 10, 2026</p>
+            </div>
+        </article>
+    </section>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
